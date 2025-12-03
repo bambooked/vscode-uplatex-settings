@@ -3,55 +3,11 @@ services:
     build: .
     command: sleep infinity
 
-    # tmpfsによるメモリ内処理
-    tmpfs:
-      - /tmp:size=1g # LaTeX中間ファイル用
-      - /var/tmp:size=256m # システム一時ファイル用
-
-    # 共有メモリサイズ増加
-    shm_size: '1gb'
-
     volumes:
-      - type: bind
-        source: ../
-        target: /workdir
-
-        # バインドマウント最適化
-
-        consistency: cached
-
-      - type: bind
-        source: ${HOME}/.gitconfig
-        target: /root/.gitconfig
-        read_only: true
-        consistency: cached
-
-      - type: bind
-        source: ./.latexmkrc
-        target: /root/.latexmkrc
-        consistency: cached
+      - ../:/workdir
+      - ${HOME}/.gitconfig:/root/.gitconfig:ro
+      - ./.latexmkrc:/root/.latexmkrc
 
     environment:
-      SHELL: "/bin/bash"
       LANG: "ja_JP.UTF-8"
       TZ: "Asia/Tokyo"
-
-      # 環境変数による最適化
-
-      TEXMFCACHE: "/tmp/texmf-cache" # TeXキャッシュを高速領域に
-      
-    # リソースの定義
-    deploy:
-      resources:
-        limits:
-          memory: 4G
-        reservations:
-          memory: 1G # 最低メモリ確保
-
-    # ヘルスチェック
-    healthcheck:
-      test: [ "CMD", "pdflatex", "--version" ]
-      interval: 60s
-      timeout: 5s
-      retries: 2
-      start_period: 3s
