@@ -1,5 +1,5 @@
 {
-    "name": "LaTeX-Japanese-Environment",
+    "name": "LaTeX-Container",
     "dockerComposeFile": "docker-compose.yml",
     "service": "ubuntu-texlive-ja",
     "workspaceFolder": "/workdir",
