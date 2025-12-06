@@ -1,45 +1,10 @@
 {
-  // PDF のシンクテックス設定
-  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-  // ビルド自動化設定
   "latex-workshop.latex.autoBuild.run": "onFileChange",
-  "latex-workshop.latex.autoClean.run": "onBuilt",
-  // エディタ設定
-  "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
-  // 改良された LaTeX tools 設定
   "latex-workshop.latex.tools": [
     {
-      "name": "Latexmk (upLaTeX)",
+      "name": "latexmk",
       "command": "latexmk",
       "args": [
-        "-f",
-        "-gg",
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "Latexmk (pLaTeX)",
-      "command": "latexmk",
-      "args": [
-        "-f",
-        "-gg",
-        "-pv",
-        "-latex='platex'",
-        "-latexoption='-kanji=utf8 -no-guess-input-env'",
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "Latexmk (xelatex)",
-      "command": "latexmk",
-      "args": [
-        "-xelatex",
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
@@ -47,76 +12,13 @@
       ]
     }
   ],
-  // レシピ設定
   "latex-workshop.latex.recipes": [
     {
-      "name": "upLaTeX",
+      "name": "latexmk",
       "tools": [
-        "Latexmk (upLaTeX)"
-      ]
-    },
-    {
-      "name": "pLaTeX",
-      "tools": [
-        "Latexmk (pLaTeX)"
-      ]
-    },
-    {
-      "name": "XeLaTeX",
-      "tools": [
-        "Latexmk (xelatex)"
+        "latexmk"
       ]
     }
   ],
-  // マジックコメント設定
-  "latex-workshop.latex.magic.args": [
-    "-f",
-    "-gg",
-    "-pv",
-    "-synctex=1",
-    "-interaction=nonstopmode",
-    "-file-line-error",
-    "%DOC%"
-  ],
-  // クリーンアップするファイルタイプ（最新の推奨設定）
-  "latex-workshop.latex.clean.fileTypes": [
-    "*.aux",
-    "*.bbl",
-    "*.blg",
-    "*.idx",
-    "*.ind",
-    "*.lof",
-    "*.lot",
-    "*.out",
-    "*.toc",
-    "*.acn",
-    "*.acr",
-    "*.alg",
-    "*.glg",
-    "*.glo",
-    "*.gls",
-    "*.ist",
-    "*.fls",
-    "*.log",
-    "*.fdb_latexmk",
-    "*.synctex.gz",
-    "*.dvi",
-    "_minted*",
-    "*.nav",
-    "*.snm",
-    "*.vrb",
-    "*.run.xml",
-    "*.bcf",
-    "*.xdv"
-  ],
-  // PDF ビューア設定
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.view.pdf.zoom": "page-width",
-  "latex-workshop.view.pdf.hand": true,
-  // インテリセンス設定
-  "latex-workshop.intellisense.package.enabled": true,
-  "latex-workshop.intellisense.unimathsymbols.enabled": true,
-  // その他の最新設定
-  "latex-workshop.latex.rootFile.useSubFile": true,
-  "latex-workshop.message.update.show": false
+  "latex-workshop.view.pdf.viewer": "tab"
 }

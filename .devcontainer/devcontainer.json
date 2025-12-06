@@ -1,40 +1,14 @@
 {
-    "name": "LaTeX-Japanese-Environment",
+    "name": "LaTeX-Container",
     "dockerComposeFile": "docker-compose.yml",
     "service": "ubuntu-texlive-ja",
     "workspaceFolder": "/workdir",
     "customizations": {
         "vscode": {
             "extensions": [
-                "james-yu.latex-workshop",
-                "ms-azuretools.vscode-docker",
-                "yzhang.markdown-all-in-one",
-                "streetsidesoftware.code-spell-checker"
-            ],
-            "settings": {
-                // LaTeXファイルのフォーマット設定
-                "[latex]": {
-                    "editor.formatOnSave": false
-                },
-                "latex-workshop.latex.formatting.enabled": false,
-                // その他の設定
-                "editor.formatOnSave": true,
-                "terminal.integrated.defaultProfile.linux": "bash",
-                "terminal.integrated.profiles.linux": {
-                    "bash": {
-                        "path": "/bin/bash"
-                    }
-                }
-            }
+                "james-yu.latex-workshop"
+            ]
         }
     },
-    "postCreateCommand": "pdflatex --version && echo 'LaTeX環境の準備完了!!'",
-    "containerEnv": {
-        "LANG": "ja_JP.UTF-8",
-        "TZ": "Asia/Tokyo"
-    },
-    "forwardPorts": [],
-    "shutdownAction": "stopCompose",
-    "remoteUser": "root",
-    "waitFor": "postCreateCommand"
+    "remoteUser": "root"
 }
