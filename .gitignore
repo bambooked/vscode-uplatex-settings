@@ -1,10 +1,16 @@
+# 中間ファイル
 *.aux
 *.dvi
 *.fdb_latexmk
 *.fls
 *.synctex.gz
 *.log
+.build/
 
 .DS_Store
 
+# pdfは生成物なので不要
 *.pdf
+# ただし、imageに入っているpdfは保存する
+!**/image/*.pdf
+!**/images/*.pdf
