@@ -1,7 +1,7 @@
 {
     "name": "LaTeX-Container",
     "dockerComposeFile": "docker-compose.yml",
-    "service": "ubuntu-texlive-ja",
+    "service": "texlive-ja",
     "workspaceFolder": "/workdir",
     "customizations": {
         "vscode": {

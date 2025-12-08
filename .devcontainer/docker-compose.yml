@@ -1,5 +1,5 @@
 services:
-  ubuntu-texlive-ja:
+  texlive-ja:
     build: .
     command: sleep infinity
 
