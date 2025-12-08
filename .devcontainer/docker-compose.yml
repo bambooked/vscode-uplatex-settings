@@ -4,7 +4,7 @@ services:
     command: sleep infinity
 
     volumes:
-      - ../:/workdir
+      - ../:/workdir:delegated
       - ${HOME}/.gitconfig:/root/.gitconfig:ro
       - ./.latexmkrc:/root/.latexmkrc
 
