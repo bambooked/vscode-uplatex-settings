@@ -1,10 +1,10 @@
 services:
-  ubuntu-texlive-ja:
+  texlive-ja:
     build: .
     command: sleep infinity
 
     volumes:
-      - ../:/workdir
+      - ../:/workdir:delegated
       - ${HOME}/.gitconfig:/root/.gitconfig:ro
       - ./.latexmkrc:/root/.latexmkrc
 
