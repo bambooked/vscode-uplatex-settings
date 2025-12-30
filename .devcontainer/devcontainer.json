@@ -7,7 +7,13 @@
         "vscode": {
             "extensions": [
                 "james-yu.latex-workshop"
-            ]
+            ],
+            "settings": {
+                "files.exclude": {
+                    "**/*.dvi": true,
+                    "**/*.synctex.gz": true
+                }
+            }
         }
     },
     "remoteUser": "root"
