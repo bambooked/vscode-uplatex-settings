@@ -14,8 +14,6 @@
                         "name": "latexmk",
                         "command": "latexmk",
                         "args": [
-                            "-r",
-                            "/workdir/.devcontainer/.latexmkrc",
                             "%DOC%"
                         ]
                     }
