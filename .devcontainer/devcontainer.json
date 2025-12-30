@@ -9,6 +9,25 @@
                 "james-yu.latex-workshop"
             ],
             "settings": {
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "latexmk",
+                        "command": "latexmk",
+                        "args": [
+                            "-r",
+                            "/workdir/.devcontainer/.latexmkrc",
+                            "%DOC%"
+                        ]
+                    }
+                ],
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "latexmk",
+                        "tools": [
+                            "latexmk"
+                        ]
+                    }
+                ],
                 "latex-workshop.latex.autoBuild.run": "onFileChange",
                 "latex-workshop.view.pdf.viewer": "tab",
                 "files.exclude": {
