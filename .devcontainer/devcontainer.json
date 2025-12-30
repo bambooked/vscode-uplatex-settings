@@ -9,6 +9,8 @@
                 "james-yu.latex-workshop"
             ],
             "settings": {
+                "latex-workshop.latex.autoBuild.run": "onFileChange",
+                "latex-workshop.view.pdf.viewer": "tab",
                 "files.exclude": {
                     "**/*.dvi": true,
                     "**/*.synctex.gz": true
