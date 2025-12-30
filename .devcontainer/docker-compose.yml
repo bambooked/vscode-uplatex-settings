@@ -6,8 +6,3 @@ services:
     volumes:
       - ../:/workdir:delegated
       - ${HOME}/.gitconfig:/root/.gitconfig:ro
-      - ./.latexmkrc:/root/.latexmkrc
-
-    environment:
-      LANG: "ja_JP.UTF-8"
-      TZ: "Asia/Tokyo"
