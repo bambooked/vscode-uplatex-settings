@@ -8,5 +8,4 @@ $makeindex = 'upmendex %O -o %D %S';
 $dvipdf = 'dvipdfmx %O -o %D %S';
 
 # 中間ファイルをまとめる。
-$out_dir = '';
 $aux_dir = '.build';
