@@ -9,6 +9,10 @@
 
 ## 概要
 
+動作動画
+
+https://github.com/user-attachments/assets/0adf94f3-63d3-4485-8cf8-b31578a29d35
+
 これはローカルでLaTeXを用いて文書を編集するための、DockerやVSCodeの設定ファイル群です。
 
 この設定ファイルを任意の場所に配置し、VSCode上で操作を行えば、VScodeをエディターとして、upLaTeXのソースコードの編集やコンパイルが行えるようにしてあります。
